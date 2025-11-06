@@ -1,28 +1,44 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Job Application Form</title>
 </head>
 <body>
-    <h2>Job Application Form</h2>
-    <form action="register" method="get">
-        <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="Applicantname" ><br><br>
 
-        <label for="mobile">Mobile Number:</label><br>
-        <input type="text" id="mobile" name="Applicantmobile" ><br><br>
+    <h2 align="center">Job Application Form</h2>
 
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="Applicantemail" ><br><br>
+    <form:form action="register" method="get" modelAttribute="UserInfo">
+        <div align="center">
 
-        <label for="age">Age:</label><br>
-        <input type="number" id="age" name="Applicantage" ><br><br>
+            <p>
+                <label for="name">Full Name:</label><br>
+                <form:input path="Applicantname" id="name" />
+            </p>
 
-        <input type="submit" value="Submit Application">
-    </form>
+            <p>
+                <label for="mobile">Mobile Number:</label><br>
+                <form:input path="Applicantmobile" id="mobile" />
+            </p>
+
+            <p>
+                <label for="email">Email Address:</label><br>
+                <form:input path="Applicantemail" id="email" />
+            </p>
+
+            <p>
+                <label for="age">Age:</label><br>
+                <form:input path="Applicantage" id="age" />
+            </p>
+
+            <input type="submit" value="Submit Application" />
+
+        </div>
+    </form:form>
+  
+
 </body>
-
 </html>

@@ -9,9 +9,9 @@
 <body>
     <h2>Here all the info will be displayed</h2>
 
-    <p><strong>Name of Applicant:</strong> ${users.applicantname}</p>
-    <p><strong>Mobile Number:</strong> ${users.applicantmobile}</p>
-    <p><strong>Email Address:</strong> ${users.applicantemail}</p>
-    <p><strong>Age:</strong> ${users.applicantage}</p>
+    <p><strong>Name of Applicant:</strong> ${UserInfo.applicantname}</p>
+    <p><strong>Mobile Number:</strong> ${UserInfo.applicantmobile}</p>
+    <p><strong>Email Address:</strong> ${UserInfo.applicantemail}</p>
+    <p><strong>Age:</strong> ${UserInfo.applicantage}</p>
 </body>
 </html>

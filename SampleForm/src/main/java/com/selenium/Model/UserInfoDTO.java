@@ -2,10 +2,10 @@ package com.selenium.Model;
 
 public class UserInfoDTO {
 	
-	private String Applicantname;
-	private int Applicantmobile;
+	private String Applicantname ="Ankit Kumar";
+	private int Applicantmobile =91;
 	private String Applicantemail;
-	private int Applicantage;
+	private int Applicantage = 00;
 	public String getApplicantname() {
 		return Applicantname;
 	}
