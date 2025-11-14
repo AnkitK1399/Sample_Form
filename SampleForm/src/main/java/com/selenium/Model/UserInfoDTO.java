@@ -1,11 +1,16 @@
 package com.selenium.Model;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class UserInfoDTO {
 	
-	private String Applicantname ="Ankit Kumar";
-	private int Applicantmobile =91;
+	@NotBlank(message = "Name should not be blank")
+	@Size(min = 5, max = 20, message = "Your name should have character between 5 - 15")
+	private String Applicantname;
+	private int Applicantmobile;
 	private String Applicantemail;
-	private int Applicantage = 00;
+	private int Applicantage;
 	public String getApplicantname() {
 		return Applicantname;
 	}
