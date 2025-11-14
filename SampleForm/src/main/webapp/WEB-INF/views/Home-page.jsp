@@ -87,13 +87,17 @@
         <form:input path="Applicantname" id="name" cssErrorClass="error-field"/>
         <form:errors path="Applicantname" cssClass="error"/>
 
-        <label for="mobile">Mobile Number:</label>
-        <form:input path="Applicantmobile" id="mobile" cssErrorClass="error-field"/>
-        <form:errors path="Applicantmobile" cssClass="error"/>
-
-        <label for="email">Email Address:</label>
-        <form:input path="Applicantemail" id="email" cssErrorClass="error-field"/>
-        <form:errors path="Applicantemail" cssClass="error"/>
+        <div>
+        <h3>Communication</h3>
+        
+        <label>Email</label>
+        <form:input path="communicationDTO.email"/>
+        
+        <label>Phone Number</label>
+        <form:input path="communicationDTO.phone"/>
+        
+        
+        </div>
 
         <label for="age">Age:</label>
         <form:input path="Applicantage" id="age" cssErrorClass="error-field"/>

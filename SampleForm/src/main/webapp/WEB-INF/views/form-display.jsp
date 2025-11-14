@@ -10,8 +10,8 @@
     <h2>Here all the info will be displayed</h2>
 
     <p><strong>Name of Applicant:</strong> ${UserInfo.applicantname}</p>
-    <p><strong>Mobile Number:</strong> ${UserInfo.applicantmobile}</p>
-    <p><strong>Email Address:</strong> ${UserInfo.applicantemail}</p>
+    <p><strong>Mobile Number:</strong> ${UserInfo.communicationDTO.email}</p>
+    <p><strong>Mobile Number:</strong> ${UserInfo.communicationDTO.phone}</p>
     <p><strong>Age:</strong> ${UserInfo.applicantage}</p>
 </body>
 </html>

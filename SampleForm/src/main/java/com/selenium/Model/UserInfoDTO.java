@@ -1,5 +1,6 @@
 package com.selenium.Model;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -8,8 +9,8 @@ public class UserInfoDTO {
 	@NotBlank(message = "Name should not be blank")
 	@Size(min = 5, max = 20, message = "Your name should have character between 5 - 15")
 	private String Applicantname;
-	private int Applicantmobile;
-	private String Applicantemail;
+	@Valid
+	private CommunicationDTO communicationDTO;
 	private int Applicantage;
 	public String getApplicantname() {
 		return Applicantname;
@@ -17,17 +18,13 @@ public class UserInfoDTO {
 	public void setApplicantname(String applicantname) {
 		Applicantname = applicantname;
 	}
-	public int getApplicantmobile() {
-		return Applicantmobile;
+	
+	
+	public CommunicationDTO getCommunicationDTO() {
+		return communicationDTO;
 	}
-	public void setApplicantmobile(int applicantmobile) {
-		Applicantmobile = applicantmobile;
-	}
-	public String getApplicantemail() {
-		return Applicantemail;
-	}
-	public void setApplicantemail(String applicantemail) {
-		Applicantemail = applicantemail;
+	public void setCommunicationDTO(CommunicationDTO communicationDTO) {
+		this.communicationDTO = communicationDTO;
 	}
 	public int getApplicantage() {
 		return Applicantage;
@@ -37,9 +34,10 @@ public class UserInfoDTO {
 	}
 	@Override
 	public String toString() {
-		return "UserInfoDTO [Applicantname=" + Applicantname + ", Applicantmobile=" + Applicantmobile
-				+ ", Applicantemail=" + Applicantemail + ", Applicantage=" + Applicantage + "]";
+		return "UserInfoDTO [Applicantname=" + Applicantname + ", communicationDTO=" + communicationDTO
+				+ ", Applicantage=" + Applicantage + "]";
 	}
+	
 	
 
 }
