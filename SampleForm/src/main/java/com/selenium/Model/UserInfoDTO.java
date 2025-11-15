@@ -11,6 +11,7 @@ public class UserInfoDTO {
 	private String Applicantname;
 	@Valid
 	private CommunicationDTO communicationDTO;
+	@Age(lower= 45, upper = 50)
 	private int Applicantage;
 	public String getApplicantname() {
 		return Applicantname;
