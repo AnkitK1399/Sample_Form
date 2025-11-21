@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.selenium.Model.UserInfoDTO;
+import com.selenium.customEditor.NamePropertyEditor;
 
 import jakarta.validation.Valid;
 
@@ -37,6 +38,9 @@ public class MyController {
 		System.out.println("Hello");
 		StringTrimmerEditor editor = new StringTrimmerEditor(true);
 		webDataBinder.registerCustomEditor(String.class, "Applicantname", editor);
+		
+		NamePropertyEditor myCustomEditor = new NamePropertyEditor();
+		webDataBinder.registerCustomEditor(String.class,"Applicantname", myCustomEditor);
 
 	}
 
